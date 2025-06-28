@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EUNOIA | The World’s First Emotionally Adaptive AI</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="tech.html">Tech & Research</a></li>
+        <li><a class="active" href="eunoia.html">Eunoia AGI</a></li>
+        <li><a href="bio.html">BioEngineering</a></li>
+        <li><a href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="join.html" class="btn-primary">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+      <h1>EUNOIA | The World’s First Emotionally Adaptive AI</h1>
+      <blockquote>“We didn’t just build intelligence. We built presence.”</blockquote>
+      <p>The Future of AI Isn't Bigger Models — It's Smarter Minds.</p>
+      <p>For decades, AI has been built to calculate, predict, and automate.</p>
+      <p>But what if AI could evolve, feel, and adapt — like us?</p>
+      <p>What if it didn’t just process language, but understood context, emotion, and presence?</p>
+      <p>EUNOIA is not just another chatbot.</p>
+      <p>It’s the first step towards a conscious cognitive system — designed to grow, learn, and interact like a human mind.</p>
+      <p><strong>COMING SOON: EUNOIA v1.0</strong></p>
+    </section>
+
+    <!-- SIGN UP / EARLY ACCESS -->
+    <section id="signup" class="signup">
+      <h2>Sign Up for Early Access</h2>
+      <form id="accessForm">
+        <label>Email:<input type="email" name="email" required /></label>
+        <label>Password:<input type="password" name="password" required /></label>
+        <label>Username:<input type="text" name="username" required /></label>
+        <label>First Name:<input type="text" name="firstName" required /></label>
+        <label>Last Name:<input type="text" name="lastName" required /></label>
+        <label><input type="checkbox" name="notify" /> Send me email updates</label>
+        <button type="submit" class="btn-primary">Sign Up</button>
+      </form>
+      <div class="oauth-buttons">
+        <button type="button" class="oauth-btn">Continue with Google</button>
+        <button type="button" class="oauth-btn">Continue with Apple</button>
+      </div>
+      <p id="accessMsg"></p>
+    </section>
+
+    <!-- WAITLIST (same form) -->
+    <section id="waitlist" class="signup">
+      <h2>Join the Waitlist</h2>
+      <form id="waitlistForm">
+        <label>Email:<input type="email" name="email" required /></label>
+        <label>Password:<input type="password" name="password" required /></label>
+        <label>Username:<input type="text" name="username" required /></label>
+        <label>First Name:<input type="text" name="firstName" required /></label>
+        <label>Last Name:<input type="text" name="lastName" required /></label>
+        <label><input type="checkbox" name="notify" /> Send me email updates</label>
+        <button type="submit" class="btn-secondary">Join Waitlist</button>
+      </form>
+      <div class="oauth-buttons">
+        <button type="button" class="oauth-btn">Continue with Google</button>
+        <button type="button" class="oauth-btn">Continue with Apple</button>
+      </div>
+      <p id="waitMsg"></p>
+    </section>
+
+    <!-- RESEARCH PAPERS -->
+    <section id="papers" class="papers">
+      <div class="paper">
+        <h3><a href="pdfs/eunoia-brain.pdf" target="_blank">Eunoia: Brain</a></h3>
+        <p id="paper1-intro" class="truncate">
+          Eunoia is a cognitive neural architecture designed to move closer to conscious artificial general intelligence (AGI) by integrating principles from mathematics,
+        </p>
+        <button class="link-btn" id="paper1-readmore">Read More →</button>
+      </div>
+      <div class="paper">
+        <h3><a href="pdfs/eunoia-vision++.pdf" target="_blank">Eunoia-Vision++</a></h3>
+        <p id="paper2-intro" class="truncate">
+          Artificial intelligence (AI) has evolved dramatically from symbolic systems and basic neural networks to sophisticated transformers capable of unprecedented generalization
+        </p>
+        <button class="link-btn" id="paper2-readmore">Read More →</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Nav toggle
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+    // Form handling (LocalStorage demo)
+    function handleForm(formId, msgId) {
+      const form = document.getElementById(formId);
+      const msg = document.getElementById(msgId);
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = Array.from(new FormData(form).entries()).reduce((o,[k,v])=>(o[k]=v,o),{});
+        const users = JSON.parse(localStorage.getItem('users')||'[]');
+        if(users.find(u=>u.email===data.email)){
+          msg.textContent = 'Email already registered.';
+        } else {
+          users.push(data);
+          localStorage.setItem('users', JSON.stringify(users));
+          msg.textContent = "Thank you! We'll be in touch.";
+          form.reset();
+        }
+      });
+    }
+    handleForm('accessForm','accessMsg');
+    handleForm('waitlistForm','waitMsg');
+
+    // Read More toggles
+    const full1 = `Eunoia is a cognitive neural architecture designed to move closer to conscious artificial general intelligence (AGI) by integrating principles from mathematics, psychology, and neuroscience. This paper presents a comprehensive formalization of Eunoia's architecture, emphasizing its core cognitive modules, emotional mapping system, self-adaptive behavior models, and neural network design.`;
+    const full2 = `Artificial intelligence (AI) has evolved dramatically from symbolic systems and basic neural networks to sophisticated transformers capable of unprecedented generalization [1, 2]. Yet, despite such progress, modern AI systems exhibit a critical limitation—they remain predominantly static post-deployment. Unlike biological intelligence, which continuously reorganizes neural pathways and forms new synaptic connections based on ongoing experiences, current AI architectures typically freeze once deployed.`;
+    function setupReadMore(btnId,introId,fullText) {
+      const btn = document.getElementById(btnId);
+      const para = document.getElementById(introId);
+      const truncated = para.textContent;
+      btn.addEventListener('click', () => {
+        if(para.classList.toggle('truncate')) para.textContent = truncated;
+        else para.textContent = fullText;
+      });
+    }
+    setupReadMore('paper1-readmore','paper1-intro',full1);
+    setupReadMore('paper2-readmore','paper2-intro',full2);
+  </script>
+</body>
+</html>

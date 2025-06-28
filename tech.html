@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHV Tech & Research</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle-tech" class="nav-toggle">☰</button>
+      <ul id="nav-menu-tech" class="nav-menu">
+        <li><a class="active" href="tech.html">Tech & Research</a></li>
+        <li><a href="eunoia.html">Eunoia AGI</a></li>
+        <li><a href="bio.html">BioEngineering</a></li>
+        <li><a href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="join.html" class="btn-primary">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <!-- HERO / INTRO -->
+    <section class="page-hero">
+      <h1>SHV Tech & Research</h1>
+      <p>Pioneering Artificial General Intelligence and Neural Frameworks</p>
+      <p>We believe true intelligence cannot be built on statistics alone. SHV Tech & Research leads global innovation in AGI by combining neuroscience, psychology, and computational architecture to design cognitive AI that evolves, feels, and adapts.</p>
+      <p>Our breakthrough projects, including Eunoia, the world's first emotionally adaptive, self-growing AI, are laying the groundwork for conscious machines that go beyond LLM limitations.</p>
+    </section>
+
+    <!-- FOCUS AREAS -->
+    <section class="focus-areas">
+      <h2>Our Focus Areas</h2>
+      <ul>
+        <li>✔ Artificial General Intelligence beyond language models</li>
+        <li>✔ Emotionally intelligent, self-adaptive AI systems</li>
+        <li>✔ Brain-inspired neural frameworks</li>
+        <li>✔ Ethical, safe development of advanced cognitive technologies</li>
+      </ul>
+    </section>
+
+    <!-- SHV AI SYSTEMS BLOCK -->
+    <section class="solutions">
+      <h2>SHV AI Systems</h2>
+      <p><strong>Applied AI Platforms, Tools & APIs for Real-World Impact</strong></p>
+      <p>The future of AI belongs in every industry, every home, every defense system. SHV AI Systems transforms groundbreaking research into scalable, secure, and ethically aligned AI products that solve real-world challenges.</p>
+      <p>Whether empowering enterprises with intelligent tools, deploying AI-driven defense infrastructure, or building developer-focused APIs — our mission is to ensure accessible, safe, and responsible AI for all.</p>
+      <h3>Our Solutions:</h3>
+      <ul>
+        <li>✔ Developer-friendly AI APIs</li>
+        <li>✔ Scalable enterprise AI platforms</li>
+        <li>✔ Secure, defense-grade AI integrations</li>
+        <li>✔ Customizable tools for startups to governments</li>
+      </ul>
+      <h3>Our Vision:</h3>
+      <p>To democratize access to powerful AI systems while ensuring the highest standards of safety, performance, and alignment with human values.</p>
+    </section>
+
+    <!-- PROJECT TILES -->
+    <section class="projects">
+      <h2>Key Projects</h2>
+      <div class="feature-grid">
+        <div class="feature-card" onclick="location.href='autonomous-neural.html'">
+          <h3>Autonomous Neural Architecture</h3>
+          <p>Building self-improving, real-time evolving networks.</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='behavioral-ai.html'">
+          <h3>Behavioral AI Models</h3>
+          <p>Fusing neuroscience, psychology & ML for emotion-aware AI.</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='quantum-neuromorphic.html'">
+          <h3>Quantum & Neuromorphic R&D</h3>
+          <p>Pushing limits with brain-like chips & quantum hybrids.</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle-tech').addEventListener('click', () => {
+      document.getElementById('nav-menu-tech').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

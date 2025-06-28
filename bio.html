@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHV BioEngineering & Neural Biology</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle-bio" class="nav-toggle">☰</button>
+      <ul id="nav-menu-bio" class="nav-menu">
+        <li><a href="tech.html">Tech & Research</a></li>
+        <li><a href="eunoia.html">Eunoia AGI</a></li>
+        <li><a class="active" href="bio.html">BioEngineering</a></li>
+        <li><a href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="join.html" class="btn-primary">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BACKGROUND ANIMATION CANVAS -->
+  <canvas id="bio-canvas"></canvas>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <!-- HERO / INTRO -->
+    <section class="page-hero bio-hero">
+      <h1>🧬 SHV BioEngineering & Neural Biology</h1>
+      <p class="tagline">Rewriting Human Potential through Synthetic Biology & Brain-AI Integration</p>
+      <p>Human evolution doesn't end with biology.</p>
+      <p>At SHV BioEngineering, we merge cutting-edge neuroscience, synthetic biology, and AI to unlock the next stage of human potential.</p>
+      <p>From brain-computer interfaces to AI-enhanced cognitive rewiring, we are creating systems that enable seamless interaction between the human mind and intelligent machines.</p>
+
+      <h2>Our Breakthrough Areas:</h2>
+      <ul>
+        <li>✔ Brain-AI interfacing for medical and cognitive enhancement</li>
+        <li>✔ Synthetic biology for behavioral learning and neural augmentation</li>
+        <li>✔ AI-driven research in neuroplasticity and cognitive adaptability</li>
+        <li>✔ Advanced tools for human-computer symbiosis</li>
+      </ul>
+
+      <h2>Our Vision:</h2>
+      <p>A world where technology doesn't replace humanity — it enhances it. Where biology, AI, and consciousness converge to redefine what it means to be human.</p>
+    </section>
+
+    <!-- PROJECT TILES -->
+    <section class="projects">
+      <h2>Key Initiatives</h2>
+      <div class="feature-grid">
+        <div class="feature-card" onclick="location.href='genesplice.html'">
+          <h3>GENESPLICE Project</h3>
+          <p>Rewriting evolution, one strand at a time.</p>
+          <a class="read-more">Read Paper →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='neural-lattice.html'">
+          <h3>Neural Lattice Regeneration</h3>
+          <p>Rebuilding the nervous system with AI-guided scaffolds.</p>
+          <a class="read-more">Read Paper →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='bci.html'">
+          <h3>Brain-Computer Interfaces</h3>
+          <p>Blurring the line between thought and technology.</p>
+          <a class="read-more">Read Paper →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle-bio').addEventListener('click', () => {
+      document.getElementById('nav-menu-bio').classList.toggle('open');
+    });
+
+    // Bio background animation placeholder
+    const canvas = document.getElementById('bio-canvas');
+    const ctx = canvas.getContext('2d');
+    function resizeBioCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      // TODO: draw DNA/brain animation here
+    }
+    window.addEventListener('resize', resizeBioCanvas);
+    resizeBioCanvas();
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — SHV Groups</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle-team" class="nav-toggle">☰</button>
+      <ul id="nav-menu-team" class="nav-menu">
+        <li><a href="tech.html">Tech & Research</a></li>
+        <li><a href="eunoia.html">Eunoia AGI</a></li>
+        <li><a href="bio.html">BioEngineering</a></li>
+        <li><a href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a class="active" href="team.html">Team</a></li>
+        <li><a href="join.html" class="btn-primary">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <section class="page-hero">
+      <h1>Our Team</h1>
+      <p>Meet the visionaries driving SHV Groups forward.</p>
+    </section>
+
+    <section class="team-profiles">
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="images/shaurya.jpg" alt="Shaurya Verma" />
+          <h3>Shaurya Verma</h3>
+          <p>Founder &amp; Chairman, SHV Groups</p>
+          <p>Building ASI &amp; Conscious AI | Creator of Eunoia | AI &amp; Neuroscience Researcher</p>
+          <a href="sha-details.html" class="read-more">Know More →</a>
+          <a href="https://www.linkedin.com/in/shaurya-verma-759a2824a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('nav-toggle-team').addEventListener('click', () => {
+      document.getElementById('nav-menu-team').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

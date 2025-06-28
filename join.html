@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join SHV Groups</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle-join" class="nav-toggle">☰</button>
+      <ul id="nav-menu-join" class="nav-menu">
+        <li><a href="tech.html">Tech & Research</a></li>
+        <li><a href="eunoia.html">Eunoia AGI</a></li>
+        <li><a href="bio.html">BioEngineering</a></li>
+        <li><a href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a class="active" href="join.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <section class="page-hero">
+      <h1>Join SHV Groups</h1>
+      <p>Sign up to stay updated on our latest projects, gain beta access to Eunoia, and become part of our visionary community.</p>
+    </section>
+
+    <section class="signup">
+      <h2>Sign Up / Log In</h2>
+      <form id="authForm">
+        <label>Email:<input type="email" name="email" required /></label>
+        <label>Password:<input type="password" name="password" required /></label>
+        <button type="submit" class="btn-primary">Continue</button>
+      </form>
+      <div class="oauth-buttons">
+        <button type="button" class="oauth-btn">Continue with Google</button>
+        <button type="button" class="oauth-btn">Continue with Apple</button>
+      </div>
+      <p id="authMsg"></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle-join').addEventListener('click', () => {
+      document.getElementById('nav-menu-join').classList.toggle('open');
+    });
+
+    // Auth form handling (using localStorage for demo)
+    const form = document.getElementById('authForm');
+    const msg = document.getElementById('authMsg');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = Array.from(new FormData(form).entries()).reduce((o,[k,v]) => (o[k]=v,o), {});
+      const users = JSON.parse(localStorage.getItem('users')||'[]');
+      const existing = users.find(u => u.email === data.email);
+      if (existing) {
+        msg.textContent = 'Welcome back! You are now logged in.';
+      } else {
+        users.push(data);
+        localStorage.setItem('users', JSON.stringify(users));
+        msg.textContent = 'Account created! You are now logged in.';
+      }
+      form.reset();
+    });
+  </script>
+</body>
+</html>

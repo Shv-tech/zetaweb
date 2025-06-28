@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHV Space & Robotics</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/shv-logo.jpg" alt="SHV Groups logo" />
+        <span>SHV Groups</span>
+      </a>
+      <button id="nav-toggle-space" class="nav-toggle">☰</button>
+      <ul id="nav-menu-space" class="nav-menu">
+        <li><a href="tech.html">Tech & Research</a></li>
+        <li><a href="eunoia.html">Eunoia AGI</a></li>
+        <li><a href="bio.html">BioEngineering</a></li>
+        <li><a class="active" href="space.html">Space & Robotics</a></li>
+        <li><a href="creative.html">Creative & Arts</a></li>
+        <li><a href="utopia.html">Utopian Space</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="join.html" class="btn-primary">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-page">
+    <!-- HERO / INTRO -->
+    <section class="page-hero">
+      <h1>SHV Space & Robotics</h1>
+      <p>Designing autonomous rovers, orbital AI systems, and next-gen propulsion for deep space missions—shaping humanity’s interplanetary future.</p>
+    </section>
+
+    <!-- PROJECT TILES -->
+    <section class="projects">
+      <h2>Key Projects</h2>
+      <div class="feature-grid">
+        <div class="feature-card" onclick="location.href='rover-x1.html'">
+          <h3>Autonomous Rover X-1</h3>
+          <p>AI Explorers for Alien Worlds</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='orbital-ai.html'">
+          <h3>Orbital AI System</h3>
+          <p>Smart Satellites for a Smarter Space Age</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+        <div class="feature-card" onclick="location.href='propulsion.html'">
+          <h3>Next-Gen Propulsion</h3>
+          <p>Redefining Interplanetary Travel</p>
+          <a class="read-more">Learn More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACE & DEFENSE SECTION -->
+    <section class="solutions">
+      <h2>🚀 SHV Space, Defense & Robotics</h2>
+      <p><strong>Autonomous Defense, Space Exploration & Robotics for a Safer, Bolder Tomorrow</strong></p>
+      <p>The final frontier is not just space — it’s autonomy, security, and expansion.</p>
+      <p>SHV Space, Defense & Robotics is engineering next-generation autonomous systems for national defense, space exploration, and advanced robotics. Our mission is to secure Earth and pioneer the stars — with AI-driven systems built for resilience, autonomy, and performance.</p>
+      <h3>Our Capabilities:</h3>
+      <ul>
+        <li>✔ AI-powered autonomous defense platforms</li>
+        <li>✔ Advanced robotics for critical missions</li>
+        <li>✔ Space technology for exploration, habitation, and research</li>
+        <li>✔ Earth-to-space AI integration for seamless operations</li>
+      </ul>
+      <h3>Our Vision:</h3>
+      <p>A future where nations are secure, humanity explores beyond boundaries, and robotics work alongside humans — intelligently, autonomously, and safely.</p>
+      <button class="btn-secondary" onclick="location.href='defense.html'">Learn More →</button>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 SHV Groups. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile nav toggle
+    document.getElementById('nav-toggle-space').addEventListener('click', () => {
+      document.getElementById('nav-menu-space').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
